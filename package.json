@@ -1,0 +1,19 @@
+{
+  "name": "comparator",
+  "version": "1.0.0",
+  "description": "A comparison tool project",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "test": "jest"
+  },
+  "keywords": ["comparison", "tool"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "nodemon": "^3.0.0",
+    "jest": "^29.0.0"
+  }
+}
