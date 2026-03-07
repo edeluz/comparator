@@ -297,7 +297,9 @@ function renderTable(tableEl, rows) {
   // Render rows in chunks to prevent blocking
   renderTableRowsChunked(sec.tbody, displayRows, REQUIRED_KEYS, (row, col) => {
     if (col.includes("Source")) {
-      return row.needsCurrentCheck ? "Prev+Curr" : "Prev";
+      const rowIndex = displayRows.indexOf(row) + 1;
+      const sourceValue = row.needsCurrentCheck ? "Prev+Curr" : "Prev";
+      return `${rowIndex}. ${sourceValue}`;
     }
     const pr = pickRequired(row);
     return pr[col] ?? "";
