@@ -2,6 +2,7 @@
 
 // ===== Required columns =====
 const REQUIRED_KEYS = [
+  "Source",
   "Computer Name",
   "Remote Office",
   "Region",
@@ -295,6 +296,9 @@ function renderTable(tableEl, rows) {
   
   // Render rows in chunks to prevent blocking
   renderTableRowsChunked(sec.tbody, displayRows, REQUIRED_KEYS, (row, col) => {
+    if (col.includes("Source")) {
+      return row.needsCurrentCheck ? "Prev+Curr" : "Prev";
+    }
     const pr = pickRequired(row);
     return pr[col] ?? "";
   });
