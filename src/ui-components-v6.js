@@ -356,7 +356,20 @@ function renderTableRowsChunked(tbody, rows, columns, getCellValue) {
       columns.forEach((col) => {
         const td = document.createElement("td");
         const value = getCellValue(r, col);
-        td.textContent = (value ?? "") + "";
+        const displayValue = (value ?? "") + "";
+        
+        // Set cell content
+        td.textContent = displayValue;
+        
+        // Add tooltip if text is too long
+        if (displayValue.length > 50) {
+          td.title = displayValue; // Native HTML tooltip
+          td.style.maxWidth = "200px";
+          td.style.overflow = "hidden";
+          td.style.textOverflow = "ellipsis";
+          td.style.whiteSpace = "nowrap";
+        }
+        
         tr.appendChild(td);
       });
       
