@@ -553,3 +553,14 @@ function renderCharts(nNew, nRem, nPers, newRows, currKeyRows, keyMode, barChart
   // Return the updated chart instances
   return { barChart, pieChart };
 }
+
+// Export functions globally for external usage
+window.REQUIRED_KEYS = REQUIRED_KEYS;
+window.HEADERS_EN = HEADERS_EN;
+window.createMultiDropdown = createMultiDropdown;
+window.renderTable = renderTable;
+window.renderMergedTable = renderMergedTable;
+window.renderPivotTable = renderPivotTable;
+window.buildPivotSevRegion = buildPivotSevRegion;
+window.renderCharts = renderCharts;
+window.pickRequired = pickRequired;

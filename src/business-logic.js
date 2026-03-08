@@ -239,3 +239,13 @@ function fillRegionAndMarkets(row) {
     row["Markets"] = marketFromRemote(row["Remote Office"]);
   return row;
 }
+
+// Export functions globally for external usage
+window.highLevelCategoryFromVuln = highLevelCategoryFromVuln;
+window.SUBCAT_RULES = SUBCAT_RULES;
+window.extractProductAfterPhrase = extractProductAfterPhrase;
+window.finalizeSubcategory = finalizeSubcategory;
+window.subCategoryFromVuln = subCategoryFromVuln;
+window.regionFromRemote = regionFromRemote;
+window.marketFromRemote = marketFromRemote;
+window.fillRegionAndMarkets = fillRegionAndMarkets;

@@ -46,3 +46,14 @@ function formatLocalDateTime(d = new Date()) {
     const ss = pad(d.getSeconds());
     return `${y}-${m}-${day} ${hh}:${mm}:${ss}`;
 }
+
+// Export functions globally for external usage
+window.norm = norm;
+window.keyify = keyify;
+window.getColCI = getColCI;
+window.getVal = getVal;
+window.uniqueSorted = uniqueSorted;
+window.showProgress = showProgress;
+window.setProgress = setProgress;
+window.resetProgress = resetProgress;
+window.formatLocalDateTime = formatLocalDateTime;
